@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda CaC CINE</title>
+    <script src="https://kit.fontawesome.com/c6a575f83f.js" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="Style.css/compra-entradas.css">
+</head>
+
+<body>
+    <div id="grid-contenedor">
+        <header class="header">
+            <img class="logo" src="imagenes/logo.png" alt="logo">
+            <button class="abrir-menu" id="abrir">&#9776</button>
+            <nav class="nav" id="nav">
+                <button class="cerrar-menu" id="cerrar">X</button>
+                <ul class="nav-list">
+                    <li><a href="index.html" class="activo">Inicio</a></li>
+                    <li><a href="#">Cartelera</a></li>
+                    <li><a href="compra-entradas.html">Tienda</a></li>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Empresa</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="grid-entradas">
+
+            <div class="box-1">
+                box-1
+            </div>
+            <div class="box-2">
+                <div class="entrada">
+                    <h5 class="card-title">Entrada Menores de 12 años</h5>
+                    <p class="card-text">$500</p>
+                    <p class="card-text">Presentar DNI</p>
+                </div>
+
+            </div>
+            <div class="box-3">
+                <div class="entrada">
+                    <h5 class="card-title">Entrada General</h5>
+                    <p class="card-text">$2000</p>
+                </div>
+            </div>
+            <div class="box-4">
+                <div class="entrada">
+                    <h5 class="card-title">Entrada Mayores de 65 años</h5>
+                    <p class="card-text">$1000</p>
+                    <p class="card-text">Presentar DNI</p>
+                </div>
+            </div>
+            <div class="box-5">
+                <div class="entrada">
+                    <h5 class="card-title">Entrada CaC</h5>
+                    <p class="card-text">$1500</p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h1>COMPRA DE ENTRADAS</h1>
+        </div>
+
+        <form action="" name="formulario" id="formulario">
+            <label for="Nombre">Nombre:<label>
+                    <input type="text" class="cajasTexto" id="texto1" name="texto1" value="" placeholder="nombre" required minlength="3" maxlength="20">
+                        
+                    <label for="Apellido">Apellido:<label>
+                            <input type="text" class="cajasTexto" id="texto2" value="" placeholder="apellido" required minlength="3" maxlength="20">
+                            <label for="email">email:<label>
+                                    <input type="email" class="cajasTexto" id="email" name="mail" placeholder="email" required minlength="12" maxlength="50">
+
+
+
+                                    <div id="compra">
+                                        <label>Cantidad</label>
+                                        <input type="number" type="form-control" id="cantidad" placeholder="1" min="1">
+
+                                        <div>
+                                            <label>Pelicula</label>
+                                            <select class="form-select" name="Pelicula" id="pelicula">
+                                                <option value="Estudiante">La Monja 2</option>
+                                                <option value="Trainee">Los Indestructibles 4</option>
+                                                <option value="Junior">Caceria en venecia</option>
+                                                <option value="Junior">Oppenheimer</option>
+                                                <option value="Junior">Puan</option>
+                                                <option value="Junior">No Me Rompan</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label>Categoria</label>
+                                            <select class="form-select" name="Categoria" id="categoria">
+                                                <option value="Menores">Entrada Menores</option>
+                                                <option value="Mayores">Entrada Mayores</option>
+                                                <option value="General">Entrada General</option>
+                                                <option value="CaC">Entrada CaC</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <input type="text" class="form-control result" id="total"
+                                                placeholder="Total a pagar:$" disabled>
+                                        </div>
+
+                                        <div>
+
+                                            <button type="button" id="boton2" onclick="resumen()">Total a pagar</button>
+                                            <button type="reset" id="boton1">Eliminar</button>
+                                            <button disabled type="button" id="botoncompra">COMPRAR</button>
+
+                                        </div>
+                                    </div>
+        </form>
+
+        <script>
+            let boton1 = document.getElementById("botoncompra")
+            let cajasTexto = document.querySelectorAll(".cajasTexto")
+
+            cajasTexto[1].addEventListener("keyup", () => {
+                if (cajasTexto[0].value != "" && cajasTexto[1].value != "") {
+                    document.getElementById("botoncompra").disabled = false
+                } else {
+                    document.getElementById("botoncompra").disabled = true
+                }
+            })
+
+            boton1.addEventListener("click", (event) => {
+                event.preventDefault()
+
+            })
+        </script>
+    </div>
+
+
+
+    <script src="jvs/compra-entradas.js"></script>
+    <script src="jvs/nav.js"></script>
+    <footer class="footer">
+        <i class="fa-brands fa-square-x-twitter" style="color: #f9ce00" ;></i>
+        <i class="fa-brands fa-square-instagram" style="color: #f9ce00" ;></i>
+        <i class="fa-brands fa-square-facebook" style="color: #f9ce00" ;></i>
+        <i class="fa-brands fa-linkedin" style="color: #f9ce00;"></i>
+    </footer>
+
+
+    </div>
+
+
+</body>
+
+</html>
