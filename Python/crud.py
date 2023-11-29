@@ -85,8 +85,8 @@ class Catalogo:
 
 
 #--------------------------------------------------------------------
-    def agregar_producto(self, codigo, descripcion, cantidad, precio,
-imagen, proveedor):
+    def agregar_producto(self, codigo, descripcion, cantidad, precio, imagen, proveedor):
+
         # Verificamos si ya existe un producto con el mismo código
         self.cursor.execute(f"SELECT * FROM productos WHERE codigo = {codigo}")
         
@@ -103,8 +103,8 @@ imagen, proveedor):
         return True
     
 #--------------------------------------------------------------------
-    def modificar_producto(self, codigo, nueva_descripcion,
-nueva_cantidad, nuevo_precio, nueva_imagen, nuevo_proveedor):
+    def modificar_producto(self, codigo, nueva_descripcion, nueva_cantidad, nuevo_precio, nueva_imagen, nuevo_proveedor):
+
         sql = "UPDATE productos SET descripcion = %s, cantidad = %s, precio = %s, imagen_url = %s, proveedor = %s WHERE codigo = %s"
         
         valores = (nueva_descripcion, nueva_cantidad, nuevo_precio, nueva_imagen, nuevo_proveedor, codigo)
@@ -181,8 +181,8 @@ def modificar_producto(codigo):
     imagen.save(os.path.join(ruta_destino, nombre_imagen))
 
     # Actualización del producto
-    if catalogo.modificar_producto(codigo, nueva_descripcion,
-    nueva_cantidad, nuevo_precio, nombre_imagen, nuevo_proveedor):
+    if catalogo.modificar_producto(codigo, nueva_descripcion, nueva_cantidad, nuevo_precio, nombre_imagen, nuevo_proveedor):
+    
         return jsonify({"mensaje": "Producto modificado"}), 200
     else:
         return jsonify({"mensaje": "Producto no encontrado"}), 404
