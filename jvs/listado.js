@@ -1,6 +1,6 @@
 const URL = "http://127.0.0.1:5000/"
-// Realizamos la solicitud GET al servidor para obtener todos los
-productos
+// Realizamos la solicitud GET al servidor para obtener todos los productos
+
 fetch(URL + 'productos')
     .then(function (response) {
         if (response.ok) {
@@ -16,7 +16,7 @@ fetch(URL + 'productos')
         // Iteramos sobre los productos y agregamos filas a la tabla
         for (let producto of data) {
             let fila = document.createElement('tr');
-            fila.innerHTML = '<td>' + producto.codigo + '</td>' + '<td>' + producto.descripcion + '</td>' + '<td align="right">' + producto.cantidad + '</td>' + '<td align="right">' + producto.precio + '</td>' + '<td><img src=static/img/' + producto.imagen_url + 'alt="Imagen del producto" style="width: 100px;"></td>' + '<td align="right">' + producto.proveedor + '</td>';
+            fila.innerHTML = '<td>' + producto.codigo + '</td>' + '<td>' + producto.descripcion + '</td>' + '<td align="right">' + producto.cantidad + '</td>' + '<td align="right">' + producto.precio + '</td>' + '<td><img src=/imagenes/' + producto.imagen_url + 'alt="Imagen del producto" style="width: 100px;"></td>' + '<td align="right">' + producto.proveedor + '</td>';
             // Mostrar miniatura de la imagen
             //Una vez que se crea la fila con el contenido del producto, se agrega a la tabla utilizando el método appendChild del elemento tablaProductos.
             tablaProductos.appendChild(fila);
