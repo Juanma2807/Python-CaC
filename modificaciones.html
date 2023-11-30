@@ -18,7 +18,7 @@ scale=1.0">
             <label for="codigo">Código:</label>
             <input type="text" v-model="codigo" required><br>
             <button type="submit">Modificar Producto</button>
-            <a href="index.html">Menu principal</a>
+            <a href="inventario.html">Inventario</a>
         </form>
 
         <div v-if="mostrarDatosProducto">
@@ -38,7 +38,7 @@ scale=1.0">
                 <input type="number" step="0.01" id="precioModificar" v-model="precio" required><br>
 
                 <!-- Imagen actual del producto -->
-                <img v-if="imagen_url && !imagenSeleccionada" :src="'static/img/' + imagen_url" alt="Imagen del producto" style="max-width: 200px;">
+                <img v-if="imagen_url && !imagenSeleccionada" :src="'imagenes/' + imagen_url" alt="Imagen del producto" style="max-width: 200px;">
 
                 <!-- Vista previa de la nueva imagen seleccionada -->
                 <img v-if="imagenSeleccionada" :src="imagenUrlTemp" alt="Vista previa de la nueva imagen" style="max-width: 200px;">
@@ -56,6 +56,6 @@ scale=1.0">
         </div>
     </div>
     <script src="https://unpkg.com/vue@next"></script>
-    <script src="modificaciones.js"></script>
+    <script src="jvs/modificaciones.js"></script>
 </body>
 </html>
