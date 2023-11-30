@@ -128,7 +128,7 @@ class Catalogo:
 catalogo = Catalogo(host='localhost', user='root', password='',
 database='python')
 # Carpeta para guardar las imagenes
-ruta_destino = '/imagenes'
+ruta_destino = '/imagenes/'
 
 @app.route("/productos", methods=["GET"])
 def listar_productos():
