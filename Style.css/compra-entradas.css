@@ -49,55 +49,90 @@ p {
     text-align: center;
 }
 
-
 #grid-entradas {
     display: grid;
-    grid-template-columns: 150px auto 150px;
-    grid-template-rows: repeat(3, 150px);
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 1rem;
     grid-template-areas:
         "box1 box1 box1"
-        "box2 box3 box4"
-        ". box5 .";
+        "box2 box2 box2"
+        "box3 box3 box3"
+        "box4 box4 box4"
+        ". box5 ."
+        "compra compra compra"
+        "footer footer footer";
 }
 
+.box-1, .box-2, .box-3, .box-4, .box-5{
+    text-align: center;
+    background-color: rgb(255, 204, 49);
+    height: 10rem;
+}
 
+.poster{
+    height: 10rem;
+}
 
 .box-1 {
     grid-area: box1;
-    background-color: aqua;
 }
 
 .box-2 {
     grid-area: box2;
-    background-color: blueviolet;
 }
 
 .box-3 {
     grid-area: box3;
-    background-color: rgb(49, 142, 38);
 }
 
 .box-4 {
     grid-area: box4;
-    background-color: brown;
 }
 
 .box-5 {
     grid-area: box5;
-    background-color: chocolate;
+}
+
+.compra{
+    grid-area: compra;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.botones{
+    margin-top: 0.5rem;
+}
+
+.botones >*{
+    margin-top: 1rem;
+    margin-right: 1rem;
+}
+
+#formulario>*{
+    width: 25rem; 
+    height: 6rem;
+    display: block; 
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#formulario, #formulario > *{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+
+}
+
+.contenedor-cantidad{
+    height: 2rem;
+    margin-top: 1.5rem;
 }
 
 .entrada{
     text-align: center;
     color: antiquewhite;
 }
-
-#compra{
-    display: block;
-    background-color: rgb(30, 137, 61);
-}
-
 
 footer {
     margin-top: 1rem;
@@ -111,6 +146,28 @@ footer {
     gap: 0.5rem;
 }
 
+
+@media (min-width: 1100px){
+    #grid-entradas{
+        grid-template-areas:
+        "box1 box1 box1"
+        "box2 box3 box4"
+        ". box5 ."
+        "compra compra compra"
+        "footer footer footer";
+    }
+}
+
+@media (min-width: 1500px){
+    #grid-entradas{
+        grid-template-areas:
+        "box1 box1 box1"
+        "box2 box3 box4"
+        "box5 box5 box5"
+        "compra compra compra"
+        "footer footer footer";
+    }
+}
 
 @media screen and (max-width : 550px) {
 

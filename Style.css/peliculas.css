@@ -257,26 +257,32 @@ footer {
 #grid-contenedor{
     display: grid;
     gap: 1rem;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
-    "header header"
-    "main main"
-    "article1 article1"
-    "article2 article2"
-    "section section"
-    "footer footer"
+    "header header header header header header"
+    "article2 article2 article2 article2 article2 article2"
+    "avances avances avances avances avances avances"
+    "footer footer footer footer footer footer"
     ;
+}
+
+@media (max-width: 900px){
+    .informacion-pelis, .img-container{
+        display: none;
+    }
+    .article2{
+        justify-content: center;
+    }
+
 }
 
 @media (min-width: 600px){
     #grid-contenedor{
         grid-template-areas: 
-        "header header"
-        "main main"
-        "article1 article2"
-        "article1 article2"
-        "section section"
-        "footer footer"
+        "header header header header header header"
+        "article2 article2 article2 article2 article2 article2"
+        "avances avances avances avances avances avances"
+        "footer footer footer footer footer footer"
         ;
     }
 
@@ -285,18 +291,11 @@ footer {
 @media (min-width: 1500px){
     #grid-contenedor{
         grid-template-areas: 
-        "header header"
-        "main article1"
-        "main article2"
-        "section section"
-        "footer footer"
+        "header header header header header header"
+        "article2 article2 article2 article2 article2 article2"
+        "avances avances avances avances avances avances"
+        "footer footer footer footer footer footer"
         ;
-    }
-}
-
-@media (max-width: 900px){
-    .informacion-pelis{
-        display: none;
     }
 }
 

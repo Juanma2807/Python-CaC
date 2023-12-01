@@ -17,22 +17,22 @@
     
     <form id="formulario" enctype="multipart/form-data">
             <label for="codigo">Código:</label>
-            <input type="text" id="codigo" name="codigo" required><br>
+            <input type="text" id="codigo" name="codigo" required autocomplete="off"><br>
 
             <label for="descripcion">Descripción:</label>
-            <input type="text" id="descripcion" name="descripcion" required><br>
+            <input type="text" id="descripcion" name="descripcion" required autocomplete="off"><br>
 
             <label for="cantidad">Cantidad:</label>
-            <input type="number" id="cantidad" name="cantidad" required><br>
+            <input type="number" id="cantidad" name="cantidad" required autocomplete="off"><br>
 
             <label for="precio">Precio:</label>
-            <input type="number" step="0.01" id="precio" name="precio" required><br>
+            <input type="number" step="0.01" id="precio" name="precio" required autocomplete="off"><br>
             
             <label for="imagenProducto">Imagen del producto:</label>
             <input type="file" id="imagenProducto" name="imagen">
 
             <label for="proveedorProducto">Proveedor:</label>
-            <input type="text" id="proveedorProducto" name="proveedor">
+            <input type="text" id="proveedorProducto" name="proveedor" autocomplete="off">
 
             <button type="submit">Agregar Producto</button>
             <a href="inventario.html">Inventario</a>

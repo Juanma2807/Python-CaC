@@ -1,6 +1,21 @@
-const categoria = document.querySelector("#categoria")
+const categoria = document.querySelector("#inputGroupSelect02")
 const cantidad = document.querySelector("#cantidad")
 const total = document.querySelector("#total")
+const boton = document.getElementById("botoncompra")
+const cajasTexto = document.querySelectorAll(".form-control")
+
+cantidad.addEventListener("keyup", () => {
+    if (cajasTexto[0].valueMissing && cajasTexto[1].valueMissing && cajasTexto[2].valueMissing) {
+        boton.disabled = true
+    } else {
+        boton.disabled = false
+    }
+})
+
+boton.addEventListener("click", (event) => {
+    event.preventDefault()
+
+})
 
 function resumen() {
   let resultado
@@ -19,6 +34,7 @@ function resumen() {
       resultado = 1500 * cantidad.value
       break
     default:
+      resultado = 0
       break;
   }
   total.value = `Total a pagar: $${resultado}`
@@ -26,16 +42,18 @@ function resumen() {
 
 const email = document.getElementById("email");
 
-email.addEventListener("input", function (event) {
+function mail(){
   if (email.validity.typeMismatch) {
     email.setCustomValidity(
       "¡Se esperaba una dirección de correo electrónico!",
-    );
+    )
+    alert(`La dirección que utilizaste no es válida, debe tener un "@" y tener un mínimo de 12 caracteres.`)
+    ;
   } else {
     email.setCustomValidity("");
+    botoncompra.onclick = alerta;
   }
-});
-
+}
 
 function datos() {
   var uno = document.getElementById("texto1").value;
@@ -45,13 +63,7 @@ function datos() {
   return arreglo;
 }
 
-
-
 function alerta() {
   var arreglo = datos();
   alert(`Muchas Gracias, ${arreglo[0]} ${arreglo[1]} su compra se realizado con exito; sus entradas seran enviadas al mail : ${arreglo[2]}`);
 }
-botoncompra.onclick = alerta;
-
-
-
