@@ -21,7 +21,7 @@ fetch(URL + 'productos')
             '<td align="right">' + producto.cantidad + '</td>' + 
             '<td align="right">' + producto.precio + '</td>' + 
             // Mostrar miniatura de la imagen
-            '<td><img src=imagenes/img/' + producto.imagen_url + ' alt="Imagen" style="width: 100px;"></td>' + 
+            '<td><img src=/imagenes/' + producto.imagen_url + ' alt="Imagen" style="width: 100px;"></td>' + 
             '<td align="right">' + producto.proveedor + '</td>';
             //Una vez que se crea la fila con el contenido del producto, se agrega a la tabla utilizando el método appendChild del elemento tablaProductos.
             tablaProductos.appendChild(fila);
