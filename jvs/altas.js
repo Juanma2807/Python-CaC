@@ -1,19 +1,16 @@
 const URL = "http://127.0.0.1:5000/"
 // Capturamos el evento de envío del formulario
 
-
-document.getElementById('formulario').addEventListener('submit', function
-(event) {
+document.getElementById('formulario').addEventListener('submit', function (event) 
+{
     event.preventDefault(); // Evitamos que se envie el form
+    
     var formData = new FormData();
     formData.append('codigo', document.getElementById('codigo').value);
     formData.append('descripcion', document.getElementById('descripcion').value);
-
     formData.append('cantidad', document.getElementById('cantidad').value);
-
     formData.append('precio', document.getElementById('precio').value);
     formData.append('imagen', document.getElementById('imagenProducto').files[0]);
-
     formData.append('proveedor', document.getElementById('proveedorProducto').value);
 
     // Realizamos la solicitud POST al servidor
@@ -30,7 +27,7 @@ document.getElementById('formulario').addEventListener('submit', function
             // Si hubo un error, lanzar explícitamente una excepción
             // para ser "catcheada" más adelante
             throw new Error('Error al agregar el producto.');
-            }
+        }
     })
     // Respuesta OK
     .then(function () {
