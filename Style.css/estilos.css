@@ -20,7 +20,7 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
-    color: #007bff;
+    color: #f9ce00;
 }
 
 form {
@@ -70,7 +70,7 @@ input[type="submit"]:hover {
 button {
     padding: 8px;
     margin: 4px;
-    background-color: #007bff;
+    background-color: #f9ce00;
     color: #ffffff;
     border: none;
     border-radius: 5px;
@@ -78,13 +78,17 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #cfaf10;
 }
 
-a {
+table {
+    margin-top: 2rem;
+}
+
+td > a, .contenedor-centrado > a, #inventario-btn {
     padding: 8px;
     margin: 4px;
-    background-color: #fdab13;
+    background-color: #f9ce00;
     color: #ffffff;
     border: none;
     border-radius: 5px;
@@ -93,6 +97,6 @@ a {
     font-size: 85%;
 }
 
-a:hover {
-    background-color: #cd7b00;
+td > a:hover, .contenedor-centrado > a:hover, #inventario-btn:hover {
+    background-color: #cfaf10;
 }

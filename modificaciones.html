@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="viewport" content="width=device-width, initial-
+scale=1.0">
 
     <title>Modificar Producto</title>
     <link rel="stylesheet" href="Style.css/estilos.css">
@@ -57,12 +56,10 @@
                 <input type="number" step="0.01" id="precioModificar" v-model="precio" required><br>
 
                 <!-- Imagen actual del producto -->
-                <img v-if="imagen_url && !imagenSeleccionada" :src="'imagenes/' + imagen_url" alt="Imagen del producto"
-                    style="max-width: 200px;">
+                <img v-if="imagen_url && !imagenSeleccionada" :src="'https://www.pythonanywhere.com/user/carlicodo/files/home/carlicodo/mysite/static/img/' + imagen_url" alt="Imagen del producto" style="max-width: 200px;">
 
                 <!-- Vista previa de la nueva imagen seleccionada -->
-                <img v-if="imagenSeleccionada" :src="imagenUrlTemp" alt="Vista previa de la nueva imagen"
-                    style="max-width: 200px;">
+                <img v-if="imagenSeleccionada" :src="imagenUrlTemp" alt="Vista previa de la nueva imagen" style="max-width: 200px;">
                 <!-- Input para nueva imagen -->
                 <label for="nuevaImagen">Nueva Imagen:</label>
                 <input type="file" id="nuevaImagen" @change="seleccionarImagen"><br>
@@ -79,5 +76,4 @@
     <script src="https://unpkg.com/vue@next"></script>
     <script src="jvs/modificaciones.js"></script>
 </body>
-
 </html>
