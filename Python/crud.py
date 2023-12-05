@@ -14,7 +14,8 @@ import time
 #--------------------------------------------------------------------
 
 app = Flask(__name__)
-CORS(app, supports_credentials=True) # Esto habilitará CORS para todas las rutas
+CORS(app) 
+# Esto habilitará CORS para todas las rutas
 
 
 class Catalogo:
